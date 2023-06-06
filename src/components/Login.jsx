@@ -26,7 +26,7 @@ function Login() {
     const handleSubmit = (e) => {
         e.preventDefault();
   
-      fetch('http://127.0.0.1:8000/api/users/token', {
+      fetch('http://192.168.111.194:8000/api/users/token', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ function Login() {
         .then((data) => {
           if (data.access) {
             localStorage.setItem('token', data.access);
-            window.location.href = 'https://www.linux.org/';
+            window.location.href = 'https://www.uit.edu.vn/';
           } else {
             setError('Tên người dùng hoặc mật khẩu không chính xác')
           }

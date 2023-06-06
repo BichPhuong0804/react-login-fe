@@ -26,7 +26,7 @@ function Register() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        axios.post('http://127.0.0.1:8000/api/users/register', {
+        axios.post('http://192.168.111.194:8000/api/users/register', {
             username: username,
             email: email,
             password: password
@@ -35,7 +35,7 @@ function Register() {
             const data = response.data;
             console.log(data)
             if (data.success) {
-                window.location.href = 'https://www.linux.org/';
+                window.location.href = 'http://192.168.111.193:3000/';
             } else {
                 console.log(data.success);
                 console.log('Tên người dùng hoặc mật khẩu không chính xác');
